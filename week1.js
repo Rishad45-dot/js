@@ -68,3 +68,64 @@ var result1 = test1 == 0
 var result2 = test2 == 0
 console.log('Is',num1,'an even number?',result1)
 console.log('Is',num2,'an even number?',result2)
+
+/**
+ * Conditions and Loops
+ */
+var age = 10
+if (age >= 65){
+    console.log("You get your income from your pension")
+} else if(age >= 18 && age <65) {
+    console.log("Each month you get a salary")
+} else if(age <18){
+    console.log("You get an allowance")
+} else {
+    console.log("The value of the age variable is not numerical")
+}
+
+/**
+ * Switch statements in control flow
+ */
+var light = 'red'
+switch (light) {
+    case 'green':
+        console.log("Drive")
+        break
+    case 'red':
+        console.log('Do not drive')
+        break
+    case 'yellow':
+        console.log('wait')
+        break
+    default:
+        console.log('no light')
+        break
+}
+
+var day 
+switch(day){
+    case 'monday':
+        console.log('Do Something')
+        break
+    case 'tuesday':
+        console.log('Do Something')
+        break
+    case 'wednesday':
+        console.log('Do Something')
+        break
+    case 'thursday':
+        console.log('Do Something')
+        break
+    case 'friday':
+        console.log('Do Something')
+        break
+    case 'saturday':
+        console.log('Do Something')
+        break
+    case 'sunday':
+        console.log('Do Something')
+        break
+    default:
+        console.log('There is no such day')
+        break
+}
