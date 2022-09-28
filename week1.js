@@ -129,3 +129,22 @@ switch(day){
         console.log('There is no such day')
         break
 }
+
+/**
+ * Foor loops
+ */
+for(var i = 3; i >0; i-- ){
+    console.log(i)
+}
+console.log('Uraaaaaaaaaaaaa!')
+
+/**
+ * While loops
+ */
+var counter = 3
+while ( counter > 0){
+    console.log(counter)
+    counter = counter -1
+}
+console.log('while loops')
+
