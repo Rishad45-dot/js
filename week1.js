@@ -148,3 +148,24 @@ while ( counter > 0){
 }
 console.log('while loops')
 
+/**
+ * Nested loop
+ *  */
+
+var counterForWhileOuterLoop = 3
+ while (counterForWhileOuterLoop >0){
+    for (var counterForInnerForLoop = 0; counterForInnerForLoop <= 10; counterForInnerForLoop ++){
+        console.log('consoleee.log Outer While Loop',counterForWhileOuterLoop,'And console.log Inner For loop',counterForInnerForLoop)
+    }
+    counterForWhileOuterLoop = counterForWhileOuterLoop - 1
+ }
+
+ /**
+  * Divide every tenth number by 5 and 10 
+  * By nested loops
+  */
+ for (var i = 100; i > 9; i = i -10){
+    for (var j = 10; j > 4; j = j -5){
+        console.log('Num', i , 'is divided by', j,'and result:', i/j)
+    }   
+ }
