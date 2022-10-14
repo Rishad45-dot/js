@@ -78,3 +78,35 @@ if (useRandom){
 
 addTwoNums(getNumber(), getNumber())
 
+//higher-order function.. it's just a javascript feature. higher-order functions accepts other functions as arguments, also can returns functions when invoked.
+//for example findTwonNums() function can be changed into higher order function.
+function findTwonNumsHigerOrder(getNumber1Function, getNumber2Function){
+    console.log(getNumber1Function() + getNumber2Function())
+}
+findTwonNumsHigerOrder(specificNum, randomNum)
+
+
+/**
+ * let, const these are for block scope, let and const are more stricter in usability than the word var. let, const can not be used without declaring them first.
+ * with let, const name of the variable can't be redeclared, like it's possible to redeclare with var . var color = 'red'; it's possible to redeclare var red = 'green'
+ * and let, const are scopped within the block. not just function block but even within loops, conditionals i.e for loops, if else statements.
+ */
+
+//let
+console.log(user) //this isn't gonna work, since 'user' wasn't declared as variable with let keyword before console logging it.
+let user
+//but
+let user //this time user variable is declared even though it's not assigned any values to it, console.logging it will work.
+console.log(user) //returns undefined, but javascript engine still runs
+//now if we re-declare the user variable with 'let' keyword again, and run let user = 'Anna' . it will give syntax error. Hence let keyword variable can't be re-declared
+let user = 'Anna'
+//but we can assign a value to user variable without using let keyword
+user = 'Anna'
+console.log(user)
+
+
+//finally const . it must be declared and assignes before using
+const username = 'Anna'
+console.log(username)
+
+
