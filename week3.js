@@ -109,4 +109,142 @@ console.log(user)
 const username = 'Anna'
 console.log(username)
 
+/**
+ * OOP 
+ * 1. Inheritance
+ * 2. Encapsulation
+ * 3. Abstraction
+ * 4. Polymorphism
+ */
+
+//Inheritance
+class Animal {
+    /*some code here */
+}
+//now I use the 'extends' keyword to show inheritance 
+class Bird extends Animal { 
+    /*some code here */
+}
+//again using 'extends'
+class Egle extends Bird {
+    /*some code here */
+}
+
+//Encapsulation  is easy. It just means codes are hidden but everyone can use them. such as 'toUpperCase()' method
+'abee'.toUpperCase()
+//Abstraction is conceptual idea of what someone is trynna do.
+//Polymorphism , well same function produing different result baed on context is polymorphism
+//for example '+' operator and concat() method. Same functionality. But '+' operator and concat() method 
+//produce different result based on different data type used.
+
+console.log('abc'.concat('dfgf')) //this produces 'abcdfgf'
+console.log(['abe'].concat(['dfgf'])) //this produce '['abc', 'dfgf']
+
+//now
+console.log('abc'+'dfgf') //result 'abcdfgf'
+console.log(['abc']+['dfgf']) //result again 'abcdfgf'
+
+
+/**
+ * Constructors
+ */
+class Train {
+    constructor(color, lightsOn) {
+        this.color = color;
+        this.lightsOn = lightsOn;
+    }
+    toggleLights(){
+        this.lightsOn = !this.lightsOn;
+    }
+    lightStatus(){
+        console.log('Lights On?  ', this.lightsOn)
+    }
+    getSelf(){
+        console.log(this)
+    }
+    getPrototype(){
+        const proto = Object.getPrototypeOf(this)
+        console.log(proto)
+    }
+}
+
+//build instance of Train class
+let tainNumber1 = new Train('white', false)
+console.log(tainNumber1)
+let tain3 = new Train('Blue', true)
+console.log(tain3.getSelf())
+
+//polymorphism example
+class HighSpeedTrain extends Train {
+    constructor(passesnger, color, lightsOn, speed) {
+        super(color, lightsOn)
+        this.passesnger = passesnger
+        this.speed = speed
+    }
+    toggoleHighSpeed(){
+        this.speed = !this.speed
+        console.log('High speed on?  ', this.speed)
+    }
+}
+
+/**
+ * Creating a class
+ */
+class Airplane{
+    constructor(departure_time, destination){
+        this.departure_time = departure_time
+        this.destination = destination
+
+    }
+}
+
+let time = new Date()
+departure = time.toLocaleTimeString()
+let route1 = new Airplane(departure, 'Moscow')
+console.log(route1)
+
+
+class Animal {
+    constructor(lg) {
+        this.legs = lg;
+    }
+}
+
+class Dog extends Animal {
+    constructor() {
+        super(4);
+    }
+}
+
+var result = new Dog();
+console.log(result.legs);
+
+class Animal {
+
+}
+
+class Cat extends Animal {
+  constructor() {
+    super();
+    this.noise = "meow";
+  }
+}
+
+var result = new Animal();
+console.log(result.noise);
+
+class Person {
+    sayHello() {
+        console.log("Hello");
+    }
+}
+
+class Friend extends Person {
+    sayHello() {
+        console.log("Hey");
+    }
+}
+
+var result = new Friend();
+result.sayHello();
 
