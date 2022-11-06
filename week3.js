@@ -248,3 +248,25 @@ class Friend extends Person {
 var result = new Friend();
 result.sayHello();
 
+//for of loop
+arr = ['for ', 'of ', 'loop ', 'example']
+
+sentence = ''
+for (var word of arr){
+    console.log(sentence+=word)
+}
+
+//dynamically access one of two properties of drone object by using brackets notation
+
+function textBracketsDynamicAccess(){
+    var dynamicKey = Math.random() > 0.5 ? 'speed' : 'color'
+     var drone = {
+        speed : 110,
+        color : 'white'
+     }
+    console.log(drone[dynamicKey])
+}
+textBracketsDynamicAccess()
+
+//data structures
+
