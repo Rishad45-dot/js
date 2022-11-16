@@ -270,3 +270,116 @@ textBracketsDynamicAccess()
 
 //data structures
 
+//foreach() method, it loops over every member of an array
+const fruit = ['pears', 'angur', 'apples','nuts']
+function appendIndex(index, ruit){
+    //first parameter index is the member of array, 2nd parameter ruit is the position of that memeber
+    console.log(`${ruit}. ${index}`)
+}
+fruit.forEach(appendIndex)
+
+//forEach() method on array takes in a function as parameter. and that function takes two parameters
+//now we can write the function fo forEach() method inside the forEach() brackets.
+
+sports = ['cricket','football','tennis','swimming']
+sports.forEach(function(game, index){
+    console.log(`${index+1}. ${game}`)
+})
+
+//filter() method on arrays
+const farsi = ['angur', 'ek','du','ten']
+farsi.filter(function(word){
+    console.log(word.length > 2)
+    return word.length > 2
+})
+
+//map
+[0,10,20,30,40,50].map(function(num){
+    return num/10
+})
+
+//filter style map
+[0,10,20,30,40,50].filter(function(num){
+    return num / 10
+}) //so filter literally filters out data from array. but map performs action on the array data
+
+//code
+//code beneath turns objects data into arrays data
+const result = []
+const drone = {
+    type : 'Geranium',
+    speed : 110,
+    color : 'white'
+}
+
+const droneKeys = Object.keys(drone)
+droneKeys.forEach(function(key){
+    result.push(key, drone[key])
+})
+
+console.log(result)
+
+//working with Map in javascript
+
+let bestBoxers = new Map()
+bestBoxers.set(1, 'Champion')
+bestBoxers.set(2, 'Runner Up')
+bestBoxers.set(3, '2nd Runner up')
+
+console.log(bestBoxers.get(1))
+
+//now set() is collection o funique values. to create a set we use the constructor set()
+//this set data structure can filter out unique values from an array
+const repetativeNums = [1,1,2,3,4,5,2,5,0,6,1]
+const uniqueNums = new Set(repetativeNums)
+console.log(uniqueNums)
+
+//Spread operator and Rest operator
+
+
+//test
+let obj = {
+    key: 1,
+    value: 4
+};
+
+let output = { ...obj };
+output.value -= obj.key;
+
+console.log(output.value);
+
+
+
+function scopeTest() {
+    var y = 44;
+
+    console.log(x);
+}
+
+var x = 33;
+scopeTest();
+
+
+
+class Cake {
+    constructor(lyr) {
+        this.layers = lyr;
+    }
+
+    getLayers() {
+        return this.layers;
+    }
+}
+
+class WeddingCake extends Cake {
+    constructor() {
+        super(2);
+    }
+
+    getLayers() {
+        return super.getLayers() * 5;
+    }
+}
+
+var result = new WeddingCake();
+console.log(result.getLayers());
